@@ -10,7 +10,7 @@ import aiohttp
 import base64
 import os
 
-bot_id = ''
+bot_id = os.getenv('BOT_ID')
 storage = MemoryStorage()
 bot = Bot(token=bot_id)
 dp = Dispatcher(bot, storage=storage)
