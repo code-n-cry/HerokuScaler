@@ -14,7 +14,7 @@ bot_id = os.getenv('BOT_ID')
 storage = MemoryStorage()
 bot = Bot(token=bot_id)
 dp = Dispatcher(bot, storage=storage)
-database = databases.Database(os.getenv('DATABASE_URL')).replace('postgres', 'postgresql+asyncpg')
+database = databases.Database(os.getenv('DATABASE_URL').replace('postgres', 'postgresql+asyncpg'))
 main_kb = ReplyKeyboardMarkup(resize_keyboard=True).add(KeyboardButton("Apps' list📝")).add(KeyboardButton("Add app🟣"))
 app_cb = CallbackData('app', 'name', 'owner_id')
 
