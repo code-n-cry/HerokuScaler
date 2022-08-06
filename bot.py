@@ -10,7 +10,7 @@ import aiohttp
 import base64
 import os
 
-bot_id = '5543570195:AAGNSG9MnSfrh1JsoFnVh16yghuwZ3Z5WFc'
+bot_id = ''
 storage = MemoryStorage()
 bot = Bot(token=bot_id)
 dp = Dispatcher(bot, storage=storage)
