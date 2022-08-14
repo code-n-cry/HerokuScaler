@@ -33,7 +33,7 @@ class Operation(StatesGroup):
 
 async def on_startup(_):
     await database.connect()
-    query = '''CREATE TABLE IF NOT EXISTS Apps (id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR(100), token TEXT, owner_id INTEGER)'''
+    query = '''CREATE TABLE IF NOT EXISTS Apps (id SERIAL PRIMARY KEY, name VARCHAR(100), token TEXT, owner_id INTEGER)'''
     await database.execute(query)
 
 
